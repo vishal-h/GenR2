@@ -6,7 +6,7 @@ Deployment
 
  - Server - Windows machine with a good configuration with .NET 4.5 (min)
  - A single exe (GenR2Install) should install into \{ProgramFiles}\GenR2
- - \{GenR2}\Start.[exe/bat] should start the server on 9000
+ - \{GenR2}\Start.[exe/bat] should start the server on port:9000
  - Configure domain on LAN as necessary
  - User should be able to navigate to http:\\{domain}:{port} to start working
  - http:\\{domain}:{port} should show the welcome page along with login option
@@ -23,7 +23,7 @@ As Admin
  - Authorize user(s) access to organization(s)
  - Cannot generate receipts
  - Run reports on org / user
- - Do house keeping (Back up / starting & stopiing the server etc)
+ - Do house keeping (Back up / starting & stopping the server etc)
  
 Regular use
 -----------
@@ -34,6 +34,7 @@ As User
  - Select org to work with
  - Generate receipts
  - Run reports
+ - House keeping?
 
 Receipt
 -------
@@ -43,7 +44,8 @@ Receipt typically has
 
  - A running reference number
  - Date on which the receipt was created
+ - Date of printing?
  - Name / Address / Contact of the customer
- - List of <item, quantity, price (per unit), Amount, Tax?>. Item can be anything. (No inventory management).
+ - List of [item, quantity, price (per unit), Amount, Tax?] Item can be anything. (No inventory management).
  - Customized printing (Org level header / footer etc)
 
