@@ -8,7 +8,7 @@ High level features
 App should 
 
  - Support multiple organizations
- - Support multiple users (authnetication as well as authorization)
+ - Support multiple users (authentication as well as authorization)
  - Support template based printing with configurable physical dimensions
  - Should work in a LAN environment with an option to make it web based
  - Have extensive reporting (daily / monthly / quarterly / annually)
