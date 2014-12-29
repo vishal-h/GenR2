@@ -1,5 +1,9 @@
-﻿using Owin;
-using System.Web.Http; 
+﻿using GenR2.Server.Middleware;
+using Owin;
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace GenR2.Server
 {
@@ -17,7 +21,8 @@ namespace GenR2.Server
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            appBuilder.Use<SimpleDiagnosticsMiddleware>();
             appBuilder.UseWebApi(config);
         }
-    } 
+    }
 }
