@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenR2.Server", "GenR2.Serve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenR2.DAL", "GenR2.DAL\GenR2.DAL.csproj", "{9F9E805D-9758-424A-88DE-003B5E0DDBF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenR2.Domain", "GenR2.Domain\GenR2.Domain.csproj", "{A81ABA85-380C-4B51-B310-806C9AF4BFCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9F9E805D-9758-424A-88DE-003B5E0DDBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F9E805D-9758-424A-88DE-003B5E0DDBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F9E805D-9758-424A-88DE-003B5E0DDBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81ABA85-380C-4B51-B310-806C9AF4BFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81ABA85-380C-4B51-B310-806C9AF4BFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81ABA85-380C-4B51-B310-806C9AF4BFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81ABA85-380C-4B51-B310-806C9AF4BFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
