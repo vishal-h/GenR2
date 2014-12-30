@@ -1,8 +1,5 @@
 ﻿using GenR2.Server.Middleware;
 using Owin;
-using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace GenR2.Server
@@ -20,9 +17,12 @@ namespace GenR2.Server
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
+            WindsorConfig.Configure();
+            config.Services.Replace(typeof(System.Web.Http.Dispatcher.IHttpControllerActivator), new WindsorCompositionRoot(WindsorConfig.Container));
+            appBuilder.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             appBuilder.Use<SimpleDiagnosticsMiddleware>();
             appBuilder.UseWebApi(config);
         }
+
     }
 }
