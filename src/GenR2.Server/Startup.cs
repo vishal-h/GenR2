@@ -19,6 +19,7 @@ namespace GenR2.Server
             );
             WindsorConfig.Configure();
             config.Services.Replace(typeof(System.Web.Http.Dispatcher.IHttpControllerActivator), new WindsorCompositionRoot(WindsorConfig.Container));
+
             appBuilder.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             appBuilder.Use<SimpleDiagnosticsMiddleware>();
             appBuilder.UseWebApi(config);

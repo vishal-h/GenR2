@@ -1,14 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using GenR2.DAL.Command;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace GenR2.Server.Controllers
 {
     public class ValuesController : ApiController
     {
+        TestCommand cmd;
+        public ValuesController(TestCommand cmd)
+        {
+            this.cmd = cmd;
+        }
         // GET api/values 
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value2", cmd.Message };
         }
 
         // GET api/values/5 
@@ -31,5 +37,5 @@ namespace GenR2.Server.Controllers
         public void Delete(int id)
         {
         }
-    } 
+    }
 }

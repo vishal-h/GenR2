@@ -19,6 +19,13 @@ namespace GenR2.Server
         public static void Configure()
         {
             Container.Register(
+            Classes.FromAssemblyNamed("GenR2.DAL")
+                .InNamespace("GenR2.DAL.Command")
+                .WithService.DefaultInterfaces()
+                .LifestyleTransient()
+            );
+
+            Container.Register(
                 Types.FromAssemblyNamed("GenR2.Server")
                 .BasedOn<ApiController>()
                 .If(t => t.Name.EndsWith("Controller"))
